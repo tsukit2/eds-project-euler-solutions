@@ -1,12 +1,15 @@
 // Primes sequence
 class Primes extends InfiniteSequence {
-   private filters = []
-   private current = 2
-   def next() { 
-      def nextPrime = current
-      filters << current++
-      while(filters.any { current % it == 0 })
-         ++current
+
+   protected copyStates(prevStates) {
+      prevStates?.clone() ?: [filters:[], current:2]
+   }
+
+   protected next(states) {
+      def nextPrime = states.current
+      states.filters << states.current++
+      while(states.filters.any { states.current % it == 0 })
+         ++states.current
       return nextPrime
    }
 }
