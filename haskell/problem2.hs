@@ -10,5 +10,5 @@ not exceed four million.def limit = 4 * 10**6
 -}
 import Commons
 
-main = putStrLn $ show $ sum $ takeWhile (< 4*10^6) [x | x <- fibs, even x]
+main = printval $ sum $ takeWhile (< 4*10^6) [x | x <- fibs, even x]
 
