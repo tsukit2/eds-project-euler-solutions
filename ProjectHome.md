@@ -1,0 +1,1 @@
+My attempt in solving various math problems offered by Project Euler (projecteuler.net). I worked on them on various machines at different times so it's better to have a central place hosting it so I can move around machines easily. Also, it's always nice to share them if someone interested.
